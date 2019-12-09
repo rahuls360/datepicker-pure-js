@@ -20,6 +20,7 @@ function handleFocus(type){
 function generateDates(type){
     let date = new Date();
     let month = date.getMonth();
+    let year = date.getFullYear();
     if(type === 'day'){
         let daysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
         if(month !== 1){
@@ -41,6 +42,14 @@ function generateDates(type){
             li.innerText = m;
             ul.appendChild(li);
         })
+        picker.innerHTML = ul.innerHTML;
+    }else if(type === 'year'){
+        let ul = document.createElement('ul');
+        for(let start = year - 5; start <= year + 6; start++){
+            let li = document.createElement('li');
+            li.innerText = start;
+            ul.appendChild(li);
+        }
         picker.innerHTML = ul.innerHTML;
     }
 }
