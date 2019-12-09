@@ -1,0 +1,22 @@
+.picker {
+    background-color: orange;
+    display: grid;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.picker li {
+    list-style: none;
+}
+
+.day-selected {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.month-selected {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.year-selected {
+    grid-template-columns: repeat(4, 1fr);
+}
