@@ -52,4 +52,17 @@ function generateDates(type){
         }
         picker.innerHTML = ul.innerHTML;
     }
+    const pickerDateItem = document.querySelectorAll('.picker li');
+    pickerDateItem.forEach(dateItem => {
+        dateItem.addEventListener('click', () => handleDateItem(type));
+    })
+}
+
+function handleDateItem(type){
+    switch(type){
+        case 'day': dayPicker.value = event.target.innerText; break;
+        case 'month': monthPicker.value = event.target.innerText; break;
+        case 'year': yearPicker.value = event.target.innerText; break;
+    }
+    picker.innerText = "";
 }

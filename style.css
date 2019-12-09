@@ -1,5 +1,5 @@
 .picker {
-    background-color: orange;
+    /* background-color: orange; */
     display: grid;
     position: absolute;
     margin-top: 10px;
@@ -7,6 +7,9 @@
 
 .picker li {
     list-style: none;
+    border: 1px solid grey;
+    cursor: pointer;
+    text-align: center;
 }
 
 .day-selected {
